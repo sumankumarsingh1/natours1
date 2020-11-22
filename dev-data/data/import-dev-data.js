@@ -7,7 +7,7 @@ const Review = require('../../models/reviewModel');
 
 dotenv.config({ path: './../../config.env' });
 
-const DB = process.env.DATABASE.replace('<PASSWORD>', 'h9cyvwcR3t0Q9ch8');
+const DB = process.env.DATABASE.replace('PASSWORD', 'h9cyvwcR3t0Q9ch8');
 
 mongoose
   //.connect(process.env.DATABASE_LOCAL, {
