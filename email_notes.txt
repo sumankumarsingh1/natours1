@@ -1,0 +1,33 @@
+  // 1) Create a transporter
+  const transporter = nodemailer.createTransport({
+    // service: 'Gmail',
+    // auth: {
+    //   user: process.env.GMAIL_USERNAME,
+    //   pass: process.env.GMAIL_PASSWORD,
+    // },
+    //-------------------------------------------------
+    // Activate in gmail "less secure app" option
+    // SMTP =====
+    // mailtrap.io
+    // Host:smtp.mailtrap.io
+    // Port:25 or 465 or 587 or 2525
+    // Username:c18fc0aaa69085
+    // Password:68a248f35f03fd
+    // Auth:PLAIN, LOGIN and CRAM-MD5
+    // TLS:Optional (STARTTLS on all ports)
+    //-------------------------------------------------
+    // POP3
+    // Host: pop3.mailtrap.io
+    // Port: 1100 or 9950
+    // Username: c18fc0aaa69085
+    // Password: 68a248f35f03fd
+    // Auth: USER/PASS, PLAIN, LOGIN, APOP and CRAM-MD5
+    // TLS: Optional (STARTTLS on all ports)
+    //-------------------------------------------------
+    host: process.env.EMAIL_MT_HOST,
+    port: process.env.EMAIL_MT_PORT,
+    auth: {
+      user: process.env.EMAIL_MT_USERNAME,
+      pass: process.env.EMAIL_MT_PASSWORD,
+    },
+  });
